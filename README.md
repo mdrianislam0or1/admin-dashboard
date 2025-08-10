@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+# Mock Credentials
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# login: rian@gmail.com
 
-Currently, two official plugins are available:
+# pass: 123456
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Admin Dashboard for Content Management
 
-## Expanding the ESLint configuration
+A responsive admin dashboard for managing and analyzing blog content with filtering, sorting, and data visualization capabilities.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Core Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Article Management**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  - Display articles in table/grid view
+  - Filter by author, date range, and status
+  - Sort by views, likes, comments, or publish date
+  - Pagination support
+  - Case-insensitive title search
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Performance Visualization**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - Interactive charts showing views over time
+  - Toggle between daily/monthly views
+  - Dynamic updates based on filters
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Article Editing**
+  - Modal-based editing interface
+  - Form validation for required fields
+  - Status toggling (Published/Draft)
+  - Success feedback on save
+
+### Bonus Features
+
+- Debounced filter inputs
+- Mock authentication system
+- Role-based UI (Admin/Editor views)
+- Responsive design
+
+## Tech Stack
+
+- **Framework**: React with TypeScript
+- **State Management**: Redux Toolkit
+- **Data Visualization**: Recharts
+- **UI Components**: Material-UI (MUI)
+- **Routing**: React Router
+- **API**: Mock Service Worker (MSW)
+- **Testing**: Jest + React Testing Library
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/content-admin-dashboard.git
+   ```
